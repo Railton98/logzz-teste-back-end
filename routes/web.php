@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('categories', CategoryController::class)
         ->except(['show', 'destroy']);
+    Route::resource('products', ProductController::class);
 });
 
 require __DIR__.'/auth.php';
