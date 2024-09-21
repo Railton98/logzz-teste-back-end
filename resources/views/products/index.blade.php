@@ -39,7 +39,7 @@
                                     <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                         <img class="w-8 h-8 rounded-full" src="{{ $product->image_url }}" alt="{{ $product->name }}">
                                         <div class="ps-3">
-                                            <div class="text-base font-semibold">{{ $product->name }}</div>
+                                            <div class="text-base font-semibold">{{ str($product->name)->limit(60) }}</div>
                                         </div>
                                     </th>
                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
